@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { ListarComponent } from './listar/listar.component';
 import { CadastraUsersComponent } from './cadastra-users/cadastra-users.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

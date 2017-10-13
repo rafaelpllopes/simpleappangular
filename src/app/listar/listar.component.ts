@@ -9,7 +9,7 @@ import { Http, Headers } from '@angular/http';
 })
 export class ListarComponent implements OnInit {
 
-  users = [];
+  private users = [];
 
   private headers: Headers;
   private url: string = 'https://jsonplaceholder.typicode.com/users';
@@ -22,7 +22,9 @@ export class ListarComponent implements OnInit {
   ngOnInit() {
     this.lista()
       .subscribe(users => {
-        this.users = users;
+        let array = [];
+        array = users;
+        array.forEach(user => this.addUsers(user));
       }, erro => console.log(erro));
   }
 
@@ -30,5 +32,10 @@ export class ListarComponent implements OnInit {
     return this.http
       .get(this.url)
       .map(res => res.json());
+  }
+
+  addUsers(user) {
+    this.users.push(user);
+    console.log(user);
   }
 }
