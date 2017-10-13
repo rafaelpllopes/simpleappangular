@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+.logo {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.menu-nav a:hover {
+    border-bottom: 0.2em solid blue;
+    background-color: rgba(0, 0, 0, 0.1);
+}
