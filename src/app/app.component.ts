@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Address, Company, Geo, User } from './models/User';
+import { Users } from './models/Users';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  titleHeader = 'Simple App Angular';
+  titleHeader = 'Simple App Angular'; 
 }

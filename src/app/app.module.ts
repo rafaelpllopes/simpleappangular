@@ -8,6 +8,7 @@ import 'rxjs/add/operator/map';
 import { AppComponent } from './app.component';
 import { ListarComponent } from './listar/listar.component';
 import { CadastraUsersComponent } from './cadastra-users/cadastra-users.component';
+import { ListarModule } from './listar/lista.module';
 
 
 @NgModule({

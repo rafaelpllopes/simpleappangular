@@ -1,6 +1,7 @@
 import { FormsModule } from '@angular/forms';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cadastra-users',
@@ -33,36 +34,39 @@ export class CadastraUsersComponent {
     })
   });
 
-  user = [];
+  private user = [];
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, private router: Router) {
     this.userForm = this.formBuilder.group({
       //id: [],
-      name: [''],
-      username: [''],
+      name: [],
+      username: [],
       email: ['', Validators.required],
-      phone: [''],
-      website: [''],
+      phone: [],
+      website: [],
       address: this.formBuilder.group({
-        street: [''],
-        suite: [''],
-        city: [''],
-        zipcode: [''],
+        street: [],
+        suite: [],
+        city: [],
+        zipcode: [],
         geo: this.formBuilder.group({
-          lat: [''],
-          lng: ['']
+          lat: [],
+          lng: []
         })
       }),
       company: this.formBuilder.group({
-        name: [''],
-        catchPhrase: [''],
-        bs: ['']
+        name: [],
+        catchPhrase: [],
+        bs: []
       })
     });
   }
   cadastrar(event) {
     event.preventDefault();
-    this.user.push({name: this.userForm.controls.name.value});
+    if(!this.userForm.invalid){
+      this.user.push(JSON.stringify(this.userForm.value));
+      this.router.navigate(['']);
+    }
     console.log(this.user);
   }
 }

@@ -22,9 +22,7 @@ export class ListarComponent implements OnInit {
   ngOnInit() {
     this.lista()
       .subscribe(users => {
-        let array = [];
-        array = users;
-        array.forEach(user => this.addUsers(user));
+        users.forEach(user =>  this.users.push(user));
       }, erro => console.log(erro));
   }
 
@@ -34,8 +32,7 @@ export class ListarComponent implements OnInit {
       .map(res => res.json());
   }
 
-  addUsers(user) {
+  add(user) {
     this.users.push(user);
-    console.log(user);
   }
 }
