@@ -6,5 +6,6 @@
 
 .menu-nav a:hover {
     border-bottom: 0.2em solid blue;
+    font-weight: bolder;
     background-color: rgba(0, 0, 0, 0.1);
 }
