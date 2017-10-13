@@ -9,20 +9,24 @@
             </a>
           </h4>
         </div>
-        <div id="{{user.id}}" class="panel-collapse collapse container pn" role="tabpanel" aria-labelledby="headingOne">
-            <p><strong>id:</strong> {{user.id}}</p>
-            <p><strong>Nome:</strong> {{user.name}}</p>
-            <p><strong>Usuário:</strong> {{user.username}}</p>
-            <p><strong>E-mail:</strong> {{user.email}}</p>
-            <p><strong>Endereço:</strong> {{user.address.street}}, {{user.address.suite}}</p>
-            <p><strong>Cidade:</strong> {{user.address.city}}</p>
-            <p><strong>Codigo postal:</strong> {{user.address.zipcode}}</p>
-            <p><strong>Latitude:</strong> {{user.address.geo.lat}} <strong>Longitude:</strong> {{user.address.geo.lng}}</p>
-            <p><strong>Telefone:</strong> {{user.phone}}</p>
-            <p><strong>Site:</strong> {{user.website}}</p>
-            <p><strong>Empresa:</strong> {{user.company.name}}</p>
-            <p><strong></strong>{{user.company.catchPhrase}}</p>
-            <p><strong></strong>{{user.company.bs}}</p>
+        <div id="{{user.id}}" class="panel-collapse collapse container" role="tabpanel" aria-labelledby="headingOne">
+            <div class="row panel-int">
+                <p class="col-sm-4"><strong>id:</strong> {{user.id}}</p>
+                <p class="col-sm-4"><strong>Nome:</strong> {{user.name}}</p>
+                <p class="col-sm-4"><strong>Usuário:</strong> {{user.username}}</p>
+                <p class="col-sm-4"><strong>E-mail:</strong> {{user.email}}</p>
+                <p class="col-sm-4"><strong>Endereço:</strong> {{user.address.street}}, {{user.address.suite}}</p>
+                <p class="col-sm-4"><strong>Cidade:</strong> {{user.address.city}}</p>
+                <p class="col-sm-4"><strong>Codigo postal:</strong> {{user.address.zipcode}}</p>
+                <p class="col-sm-4"><strong>Latitude:</strong> {{user.address.geo.lat}}</p>
+                <p class="col-sm-4"><strong>Longitude:</strong> {{user.address.geo.lng}}</p>
+                <p class="col-sm-4"><strong>Telefone:</strong> {{user.phone}}</p>
+                <p class="col-sm-4"><strong>Site:</strong> {{user.website}}</p>
+                <p class="col-sm-4"><strong>Empresa:</strong> {{user.company.name}}</p>
+                <p class="col-sm-4"><strong>Slogan:</strong> {{user.company.catchPhrase}}</p>
+                <p class="col-sm-4"><strong>Negocio:</strong> {{user.company.bs}}</p>
+            </div>  
+
         </div>
       </div>
     </div>

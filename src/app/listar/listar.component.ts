@@ -9,11 +9,7 @@ import { Http, Headers } from '@angular/http';
 })
 export class ListarComponent implements OnInit {
 
-  public users = [
-    {id: 1, name: 'rafael', email: 'rafael@rafael'},
-    {id: 2, name: 'rafael', email: 'rafael@rafael'},
-    {id: 3, name: 'rafael', email: 'rafael@rafael'}
-  ];
+  users = [];
 
   private headers: Headers;
   private url: string = 'https://jsonplaceholder.typicode.com/users';

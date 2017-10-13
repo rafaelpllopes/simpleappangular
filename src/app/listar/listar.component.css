@@ -3,10 +3,6 @@ h2 {
     text-transform: uppercase;
 }
 
-.pn p:first-child {
-    margin-top: 1em;
-}
-
-.pn p:last-child {
-    margin-bottom: 1em;
+.panel-int {
+    padding: 1em;
 }
