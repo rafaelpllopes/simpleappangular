@@ -1,0 +1,66 @@
+<section class="container">
+  <h2>Usuários</h2>
+  <!--<div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+            <th>id</th>
+            <th>Nome</th>
+            <th>Usuário</th>
+            <th>Email</th>
+            <th>Endereço</th>
+            <th>Cidade</th>
+            <th>Codigo postal</th>
+            <th>Latitude</th>
+            <th>Longitude</th>
+            <th>Telefone</th>
+            <th>Site</th>
+            <th>Empresa</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{user.id}}</td>
+          <td>{{user.name}}</td>
+          <td>{{user.username}}</td>
+          <td>{{user.email}}</td>
+          <td>{{user.address.street}}, {{user.address.suite}}</td>
+          <td>{{user.address.city}}</td>
+          <td>{{user.address.zipcode}}</td>
+          <td>{{user.address.geo.lat}}</td>
+          <td>{{user.address.geo.lng}}</td>
+          <td>{{user.phone}}</td>
+          <td>{{user.website}}</td>
+          <td>{{user.company.name}} {{user.company.catchPhrase}} {{user.company.bs}}</td>
+        </tr>    
+      </tbody>
+    </table>
+  </div>-->
+
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+      <div *ngFor="let user of users" class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne">
+          <h4 class="panel-title">
+            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{user.id}}" aria-expanded="true" aria-controls="collapseOne">
+                #{{user.id}} <strong>{{user.name}}</strong>
+            </a>
+          </h4>
+        </div>
+        <div id="{{user.id}}" class="panel-collapse collapse container pn" role="tabpanel" aria-labelledby="headingOne">
+            <p><strong>id:</strong> {{user.id}}</p>
+            <p><strong>Nome:</strong> {{user.name}}</p>
+            <p><strong>Usuário:</strong> {{user.username}}</p>
+            <p><strong>E-mail:</strong> {{user.email}}</p>
+            <p><strong>Endereço:</strong> {{user.address.street}}, {{user.address.suite}}</p>
+            <p><strong>Cidade:</strong> {{user.address.city}}</p>
+            <p><strong>Codigo postal:</strong> {{user.address.zipcode}}</p>
+            <p><strong>Latitude:</strong> {{user.address.geo.lat}} <strong>Longitude:</strong> {{user.address.geo.lng}}</p>
+            <p><strong>Telefone:</strong> {{user.phone}}</p>
+            <p><strong>Site:</strong> {{user.website}}</p>
+            <p><strong>Empresa:</strong> {{user.company.name}}</p>
+            <p><strong></strong>{{user.company.catchPhrase}}</p>
+            <p><strong></strong>{{user.company.bs}}</p>
+        </div>
+      </div>
+    </div>
+</section>

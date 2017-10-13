@@ -1,0 +1,12 @@
+h2 {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.pn p:first-child {
+    margin-top: 1em;
+}
+
+.pn p:last-child {
+    margin-bottom: 1em;
+}
