@@ -1,6 +1,24 @@
 <header>
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand logo" [routerLink]="['']">Simple App Angular</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="collapse-navbar">
+          <ul class="nav navbar-nav menu-nav">
+              <li><a [routerLink]="['']">Home</a></li>
+              <li><a [routerLink]="['cadastro']">Cadastrar</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   <h1>{{titleHeader}}</h1>
 </header>
-<app-cadastra-users></app-cadastra-users>
-<app-listar></app-listar>
+<router-outlet></router-outlet>
 

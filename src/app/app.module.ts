@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { routing }  from './app.routes';
 import 'rxjs/add/operator/map';
 
 import { AppComponent } from './app.component';
@@ -18,7 +19,8 @@ import { CadastraUsersComponent } from './cadastra-users/cadastra-users.componen
     BrowserModule,
     HttpModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]
