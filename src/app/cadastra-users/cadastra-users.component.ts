@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 
 export class CadastraUsersComponent {
   userForm = new FormGroup({
-    //id: new FormControl(),
+    id: new FormControl(),
     name: new FormControl(),
     username: new FormControl(),
     email: new FormControl(),
@@ -34,11 +34,11 @@ export class CadastraUsersComponent {
     })
   });
 
-  users: Array<any> = [];
+  private users: Array<any> = [];
 
   constructor(private formBuilder: FormBuilder, private router: Router) {
     this.userForm = this.formBuilder.group({
-      //id: [],
+      id: [],
       name: [],
       username: [],
       email: ['', [Validators.required, Validators.pattern('.+@.+')]],
@@ -63,16 +63,14 @@ export class CadastraUsersComponent {
   }
   cadastrar(event) {
     event.preventDefault();
-    //console.log(this.userForm.value);
-    //console.log(JSON.stringify(this.userForm.value));
     if(!this.userForm.invalid){
+      this.userForm.value.id = this.users.length + 1;
       this.users.push(JSON.stringify(this.userForm.value));
-      this.router.navigate(['']);
+      //this.router.navigate(['']);
       this.users.map(user => {
-        let p = JSON.parse(user)
-        console.log(`${p.name} | ${p.email}`);
+        let p = JSON.parse(user);
+        console.log(`${p.id} | ${p.name} | ${p.email}`);
       });
     }
-    //console.log(this.users);
   }
 }

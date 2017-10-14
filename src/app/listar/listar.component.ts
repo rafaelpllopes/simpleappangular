@@ -22,7 +22,7 @@ export class ListarComponent implements OnInit {
   ngOnInit() {
     this.lista()
       .subscribe(users => {
-        users.forEach(user =>  this.users.push(user));
+        users.forEach(user =>  this.add(user));
       }, erro => console.log(erro));
   }
 
