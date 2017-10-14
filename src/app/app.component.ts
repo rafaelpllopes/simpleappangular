@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { Address, Company, Geo, User } from './models/User';
-import { Users } from './models/Users';
 
 @Component({
   selector: 'app-root',

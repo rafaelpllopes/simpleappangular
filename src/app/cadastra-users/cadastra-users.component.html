@@ -21,6 +21,7 @@
             <input class="form-control" formControlName="email" type="email" name="email" id="email" placeholder="email@dominio" required>
             <div *ngIf="userForm.controls.email.invalid">
               <span *ngIf="userForm.controls.email.errors.required" class="form-control alert-danger"> E-mail é obrigatório</span> 
+              <span *ngIf="userForm.controls.email.errors.invalid" class="form-control alert-danger"> O e-mail tem que esta certo.</span> 
             </div>
           </div>
         </div>

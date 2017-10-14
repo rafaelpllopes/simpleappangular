@@ -34,14 +34,14 @@ export class CadastraUsersComponent {
     })
   });
 
-  private user = [];
+  users: Array<any> = [];
 
   constructor(private formBuilder: FormBuilder, private router: Router) {
     this.userForm = this.formBuilder.group({
       //id: [],
       name: [],
       username: [],
-      email: ['', Validators.required],
+      email: ['', [Validators.required, Validators.pattern('.+@.+')]],
       phone: [],
       website: [],
       address: this.formBuilder.group({
@@ -63,10 +63,16 @@ export class CadastraUsersComponent {
   }
   cadastrar(event) {
     event.preventDefault();
+    //console.log(this.userForm.value);
+    //console.log(JSON.stringify(this.userForm.value));
     if(!this.userForm.invalid){
-      this.user.push(JSON.stringify(this.userForm.value));
-      this.router.navigate(['']);
+      this.users.push(JSON.stringify(this.userForm.value));
+      //this.router.navigate(['']);
+      this.users.map(user => {
+        let p = JSON.parse(user)
+        console.log(`${p.name} | ${p.email}`);
+      });
     }
-    console.log(this.user);
+    //console.log(this.users);
   }
 }
