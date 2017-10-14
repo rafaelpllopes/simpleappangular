@@ -1,15 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
-.logo {
-    font-weight: bold;
-    text-transform: uppercase;
+html,
+body {
+	height: 100%;
 }
 
-.menu-nav a:hover {
-    border-bottom: 0.2em solid blue;
-    font-weight: bolder;
-    background-color: rgba(0, 0, 0, 0.1);
+header {
+	background-image: url(./assets/img/si.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+	height: 30%;
 }
 
-footer {
-    margin-top: 1.5em;
+.navbar {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.navbar-default .navbar-nav>li>a {
+	color: #000;
+	font-weight: bold;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+	font-weight: bolder;
+	border-bottom: solid 0.2em #F00;
+	font-size: 1.5em;
+	border-radius: 1em;
+	transition: .3s;
+}
+
+.navbar-default .navbar-brand {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.titulo {
+    color: rgba(255, 0, 0, 0.8);
+    text-shadow: 0.1em 0.1em #FFF;
+	padding: 2em;
+	width: 80%;
+	position: absolute;
+	top: 15%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }

@@ -2,24 +2,21 @@
     <nav class="navbar navbar-default">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-navbar" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" [routerLink]="['']"><span class="logo">Simple App Angular</span></a>
+            <a class="navbar-brand" [routerLink]="['']">
+                <img alt="Brand" src="favicon.ico">
+            </a>
         </div>
 
         <div class="collapse navbar-collapse" id="collapse-navbar">
-          <ul class="nav navbar-nav menu-nav">
+          <ul class="nav navbar-nav navbar-right">
               <li><a [routerLink]="['']">Home</a></li>
               <li><a [routerLink]="['cadastro']">Cadastrar</a></li>
           </ul>
         </div>
       </div>
     </nav>
+    <h1 class="titulo">{{titleHeader}}</h1>
 </header>
-<h1>{{titleHeader}}</h1>
 <router-outlet></router-outlet>
 <footer class="jumbotron">
   <div class="container">&copy; 2017 Rafael Pereira de Lacerda Lopes</div>
