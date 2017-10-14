@@ -67,7 +67,7 @@ export class CadastraUsersComponent {
     //console.log(JSON.stringify(this.userForm.value));
     if(!this.userForm.invalid){
       this.users.push(JSON.stringify(this.userForm.value));
-      //this.router.navigate(['']);
+      this.router.navigate(['']);
       this.users.map(user => {
         let p = JSON.parse(user)
         console.log(`${p.name} | ${p.email}`);
